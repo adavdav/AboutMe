@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Stylesheet-->
+    <style>
+        *{font-family: arial;}
+        .nav{position: relative;top: -8px;left: 0;right: 0;background-color: lightblue;padding-bottom: 2px;text-align: center;}
+        button{padding: 5px 10px;margin: 10px 10px;border: none;background-color: lightblue;}
+        .container{width: 700px;height: 550px;margin: 10px auto;box-shadow: 2px 2px 10px black;}
+        .hero img{width: 150px;height: 150px;border-radius: 50%;position: relative;left: 40%;top: 7px;}
+        .perm{position: relative;left: 150px;}
+        .edited{position: relative;left: 250px; top: -283px;}
+        .hero{opacity: 0;transition: 1s;}
+        .text{opacity: 0;transition: 1s;}
+        .home{position: relative;top: 20%;left: 20%;transition: .5s;}
+    </style>
+</head>
+<body>
+    <!--Button-->
+    <div class="nav">
+        <button onclick="daffa()" id="name1">ABOUT</button>
+        <button id="name2"></button>
+    </div>
+    <!--Content-->
+    <div class="container" id="container">
+        <div class="home" id="home"><h2>SELAMAT DATANG DI WEB SAYA</h2></div>
+        <div class="hero" id="hero">
+            <img src="daffa.png" id="image">
+        </div>
+        <div class="text" id="text">
+            <div class="perm">
+                <h4>Nama</h4>
+                <p>Kelas</p>
+                <p>Jurusan</p>
+                <p>DoB</p>
+                <p>Sekolah</p>
+                <p>Semester</p>
+                <p>Tugas</p>
+                <p>Hobi</p>
+            </div>
+            <div class="edited">
+                <h4 id="name">: Aqyla Daffa Asrafil Varidzaky</h4>
+                <p>: 12</p>
+                <p>: Tehnik Jaringan Komputer ( TKJ )</p>
+                <p id="dob">: 18 November 2006</p>
+                <p>: Smkn 1 Bukittinggi</p>
+                <p>: 6</p>
+                <p>: Tugas Akhir ASJ</p>
+                <p id="hobi">: Bermain Basket, Pemograman</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Javascript-->
+    <script>
+        function daffa(){
+            document.getElementById('image').src='daffa.png';
+            document.getElementById('name').innerHTML=': Aqyla Daffa Asrafil Varidzaky';
+            document.getElementById('dob').innerHTML=': 18 November 2006';
+            document.getElementById('hobi').innerHTML=': Bermain Basket, Pemograman';
+            document.getElementById('name1').style.backgroundColor='white';
+            document.getElementById('name2').style.backgroundColor='lightblue';
+            document.getElementById('hero').style.opacity='1';
+            document.getElementById('text').style.opacity='1';
+            document.getElementById('home').style.opacity='0';
+        }
+    </script>
+</body>
+</html>
